@@ -1,0 +1,42 @@
+name: "Feedback / Feature Request"
+description: "Share your feedback or suggest a new feature"
+title: "[Feedback]: "
+labels: ["feedback", "enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We love hearing from you! Your feedback makes this project better.
+  - type: dropdown
+    id: type
+    attributes:
+      label: "Feedback Type"
+      options:
+        - Feature request
+        - General feedback
+        - Improvement suggestion
+        - Praise / Thanks
+    validations:
+      required: true
+  - type: textarea
+    id: feedback
+    attributes:
+      label: "Your Feedback"
+      description: "Describe your idea or feedback in detail."
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: "What problem does this solve?"
+      description: "If this is a feature request, what problem would it solve?"
+  - type: dropdown
+    id: rating
+    attributes:
+      label: "How would you rate the project overall?"
+      options:
+        - "⭐⭐⭐⭐⭐ Excellent"
+        - "⭐⭐⭐⭐ Good"
+        - "⭐⭐⭐ Okay"
+        - "⭐⭐ Needs work"
+        - "⭐ Poor"
